@@ -19,19 +19,21 @@ const mesh = new THREE.Mesh(geometry, material)
 scene.add(mesh)
 
 //Positionner directement les 3 axes en même temps
-mesh.position.set(0.7, - 0.6, 1) 
+// mesh.position.set(0.7, - 0.6, 1) 
 
 //Scale
 // mesh.scale.x = 2
 // mesh.scale.y = 0.5
 // mesh.scale.z = 0.5
-mesh.scale.set(1.5, 0.5, 0.5)
+ mesh.scale.set(2, 0.25, 0.5)
 
 //Rotation
-//Réorganiser l'ordre des axes 
+//Réorganiser l'ordre des axes
+//MATH.PI --> Valeur de PI permet de faire demi rotation
 mesh.rotation.reorder('YXZ')
-mesh.rotation.x = Math.PI * 0.30
+mesh.rotation.x = Math.PI * 0.25
 mesh.rotation.y = Math.PI * 0.25
+
 
 //Axes HELPER
 const axesHelper = new THREE.AxesHelper(3)
